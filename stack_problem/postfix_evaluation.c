@@ -42,15 +42,15 @@ int evaluatePostfix(char* exp) {
         if (isdigit(ch)) {
             push(ch - '0');
         } else {
-            int b = pop();
             int a = pop();
+            int b = pop();
 
             switch (ch) {
-                case '+': push(a + b); break;
-                case '-': push(a - b); break;
-                case '*': push(a * b); break;
-                case '/': push(a / b); break;
-                case '^': push((int)pow(a, b)); break;
+                case '+': push(b + a); break;
+                case '-': push(b - a); break;
+                case '*': push(b * a); break;
+                case '/': push(b / a); break;
+                case '^': push((int)pow(b, a)); break;
             }
         }
     }

@@ -69,7 +69,7 @@ void infixToPostfix(char* infix) {
     for (int i = 0; infix[i] != '\0'; i++) {
         char ch = infix[i];
 
-        // If operand, add to output
+        // If alphabet , add to output
         if (isalpha(ch)) {//isalpha()->alphabet kina tar function.
             postfix[j++] = ch;
         }

@@ -7,7 +7,7 @@ void enqueue(int value){
     if(rear == SIZE-1){
         printf("overflow\n");
     }
-    else if(front>rear || front== -1){
+    else if(front== -1){
         front=rear=0;
         queue[rear]=value;
     }
@@ -18,7 +18,7 @@ void enqueue(int value){
 }
 
 void dequeue(){
-    if(front==-1 || front>rear){
+    if(front==-1){
         printf("underflow\n");
     }
     else if(rear==front){
